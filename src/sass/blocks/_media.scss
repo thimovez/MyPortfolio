@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .container {
         max-width: 960px;
     }
@@ -15,12 +15,12 @@
 
 @media (max-width: 768px) {
     .container {
-        max-width: 540px;
+        max-width: 578px;
     }
     .title {
         &_fz48 {
             font-size: 28px;
-        } 
+        }
     }
     .promo {
         &__title {
@@ -38,6 +38,25 @@
     .title {
         &_fz48 {
             font-size: 26px;
-        } 
+        }
+    }
+    .promo {
+        padding-top: 60%;
+    }
+    .title_fz16 {
+        font-size: 14px;
+    }
+    .promo_subtitle {
+        &::before {
+            position: absolute;
+            z-index: -1;
+            top: -15%;
+            left: 0;
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background: #ffa501;
+        }
     }
 }
