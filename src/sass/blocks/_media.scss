@@ -1,15 +1,66 @@
-@media (max-width: 1300px) {
-    .container {
-        max-width: 960px;
-    }
+@media (max-width: 1439px) {
     .sidepannel {
         display: none;
     }
 }
 
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .menu__block {
+        width: 345px;
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+        }
+        &__skills {
+            column-gap: 20px;
+            grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 250px);
+            &-item {
+                grid-template-columns: 40px 195px;
+                column-gap: 15px;
+            }
+        }
+    }
+    
+}
+
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
+    }
+    .uparrow {
+        display: none;
+    }
+    .title_fz36 {
+        font-size: 30px;
+    }
+    .promo_subtitle {
+        margin-left: 20px;
+    }
+    .promo__title {
+        margin-left: 20px;
+    }
+    .promo__btns {
+        margin-left: 20px;
+    }
+    .about {
+        padding-left: 20px;
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+            row-gap: 0;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            row-gap: 20px;
+            &-item {
+                grid-template-columns: 40px 320px;
+                column-gap: 20px;
+            }
+        }
     }
 }
 
@@ -28,6 +79,13 @@
             width: 300px;
         }
     }
+    .about {
+        padding-left: 0;
+        &__wrapper {
+            grid-template: 60% auto auto / 100%;
+        }
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -41,7 +99,7 @@
         }
     }
     .promo {
-        padding-top: 60%;
+        padding-top: 200px;
     }
     .title_fz16 {
         font-size: 14px;
@@ -58,5 +116,14 @@
             border-radius: 100%;
             background: #ffa501;
         }
+    }
+    .menu__block {
+        width: 250px;
+    }
+    .menu__list {
+        padding-left: 10px;
+    }
+    .promo {
+        background: url('../img/main_bg.jpg') no-repeat 58%/cover;
     }
 }
