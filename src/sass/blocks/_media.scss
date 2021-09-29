@@ -25,7 +25,32 @@
             }
         }
     }
-    
+    .resume {
+        &__wrapper {
+            grid-template-columns: repeat(2, 363px);
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 260px);
+            grid-auto-rows: 260px;
+            justify-content: space-around;
+            row-gap: 25px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 300px 520px;
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2, 250px);
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -62,6 +87,29 @@
             }
         }
     }
+    .resume {
+        &__wrapper {
+            grid-template-columns: repeat(2, 320px);
+            column-gap: 50px;
+        }
+        .location {
+            display: none;
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+        &__photo {
+           img {
+                display: none;
+           }
+        }
+        &__forms {
+            grid-template: 42px 190px 45px / repeat(2, 295px);
+        }
+
+    } 
 }
 
 @media (max-width: 768px) {
@@ -103,7 +151,19 @@
             padding-top: 30px;
         }
     }
-
+    .resume {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template-columns: 1fr;
+            column-gap: 60px;
+            row-gap: 40px;
+        }
+    }
+    .contacts {
+        &__forms {
+            grid-template: 42px 190px 45px / repeat(2, 230px);
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -155,7 +215,46 @@
             grid-template-columns: 1fr;
         }
     }
-    
+    .resume {
+        &__wrapper {
+            padding: 40px 5px 0 5px;
+        }
+    }
+    .contacts {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .contacts {
+        &__wrapper {
+            padding: 0;
+        }
+        &__form {
+            grid-template: unset;
+        }
+        &__triggers {
+            grid-column: unset;
+            grid-template-columns: unset;
+        } 
+        &__textarea {
+            grid-column: unset;
+        }
+        &__policy {
+            margin-top: 20px;
+        }
+        &__btn {
+            line-height: 12px;
+        }
+        &__link {
+            img {
+                max-width: 20px;
+                min-height: 20px;
+            }
+        }
+    }
+    .contacts__text {
+        width: 200px;
+    }
 }
 
 @media (max-width: 329px) {
