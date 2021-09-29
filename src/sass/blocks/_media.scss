@@ -167,7 +167,7 @@
             margin-left: 0;
         }
         &__title {
-            width: 260px;
+            width: 240px;
             margin-left: 0;
         }
         .title_fz48 {
@@ -175,6 +175,10 @@
         }
         &__btns {
             margin-left: 0;
+            width: 240px;
         }
+    }
+    .about__skills-item {
+        grid-template-columns: 40px 180px;
     }
 }
