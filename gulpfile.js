@@ -7,6 +7,9 @@ const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 
+
+
+
 gulp.task('server', function() {
 
     browserSync({
@@ -67,5 +70,14 @@ gulp.task('images', function () {
         .pipe(gulp.dest("docs/img"))
         .pipe(browserSync.stream());
 });
+
+// gulp.task('include', function() {
+//     return gulp.src('src/**.html')
+//     .pipe(include({
+//         prefix: '@@'
+//     }))
+//     .pipe(gulp.dest('docs'))
+//     .pipe(browserSync.stream());
+// });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
